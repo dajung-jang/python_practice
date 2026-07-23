@@ -176,3 +176,16 @@ print(new_text4)  # hello, world!
 # swapcase
 new_text5 = text.swapcase()
 print(new_text5)  # HEllO, WOrLD!
+
+# ===========================================
+# 강사님 오후 추가 설명
+alphabet1 = 'A'
+# 대문자 A 의 아스키코드(유니코드) : 65
+print(ord(alphabet1))
+
+# 대문자 A 의 아스키코드 : 97
+alphabet3 = 'a'
+print(ord(alphabet3))
+
+# 결론: 이거 암기하면 대문자에 32 더하면 소문자다!!
+#  ==> 그레서 upper, lower 많이 안씀 (근데 왜 그런지 이해 정확하게 못했음 클로드한테 물어보자)

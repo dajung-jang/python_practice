@@ -1,7 +1,8 @@
 # =============================================================
 # [심화] 리스트 컴프리헨션 (List Comprehension)
-# - 반복문으로 리스트를 만드는 과정을 '한 줄'로 압축하는 문법
-# - 문법: [표현식 for 변수 in 순회대상]
+# - 반복문으로 리스트를 만드는 과정을 '한 줄'로 압축하는 문법 (간결하고 효율적인 리스트 생성 방법 / puthonic 한 코드)
+# - 문법: [표현식 for 변수 in 순회대상] / list(expression for 변수 in iterable)
+#         [expression for 변수 in iterable if 조건식]
 # - 빈 리스트 생성 + for + append 3단계를 한 줄로 대체
 # =============================================================
 
@@ -28,8 +29,8 @@ print(squared_numbers)
 # =============================================================
 
 # 사용 후
-squared_numbers2 = None
-# squared_numbers2 = list(num**2 for num in numbers)
+squared_numbers2 = [num ** 2 for num in numbers]
+# squared_numbers2 = list(num**2 for num in numbers)        # squared_number2 = [num**2 for num in numbers]    동일한 코드
 print(squared_numbers2)
 
 
@@ -61,3 +62,7 @@ print(data2)
  [0, 0, 0, 0, 0],
  [0, 0, 0, 0, 0]]
 """
+# 주의사항
+# 남용하지말자 -> 코드는 짧아질 수 있지만 가독성 떨어짐
+
+# 연습할땐 먼저 길게 쓰고 list comprehension으로 짧게 줄여 쓰는거 연습
