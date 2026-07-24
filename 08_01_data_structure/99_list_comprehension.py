@@ -66,3 +66,27 @@ print(data2)
 # 남용하지말자 -> 코드는 짧아질 수 있지만 가독성 떨어짐
 
 # 연습할땐 먼저 길게 쓰고 list comprehension으로 짧게 줄여 쓰는거 연습
+
+# ===========================================
+# 강사님 추가 설명
+
+# 0으로 초기화한 리스트를 만들어라
+# pythonic 한 방법 = 1번
+
+# visited 배열 초기화
+visited = [0] * 10
+
+# 1번
+# for _ in range(5) -> 의미 : 5번 반복하는 코드
+data1 = [[0] * (5) for _ in range(5)]
+
+# 1번과 같은 코드
+ret_arr = []
+arr = [0] * 5
+for _ in range(5):
+    ret_arr.append(arr)
+
+print(ret_arr)
+
+# 2번
+data2 = [[0 for _ in range(5)] for _ in range(5)]
