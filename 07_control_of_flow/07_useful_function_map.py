@@ -67,4 +67,35 @@ squared2 = list(map(lambda x: x**2, numbers))
 print(squared2)  # [1, 4, 9, 16, 25]
 
 # ========================================================================================
-# 강사님 설명
+# 추가 메모
+# 1. map() vs for vs 리스트 컴프리헨션
+# 아래 세가지 다 출력 결과 같음 = [1, 2, 3]
+
+numbers = ['1', '2', '3']
+
+# map 사용
+result1 = list(map(int, numbers))
+
+# for 사용
+result2 = []
+for n in numbers:
+    result2.append(int(n))
+
+# 리스트 컴프리헨션
+result3 = [int(n) for n in numbers]
+
+print(result1)
+print(result2)
+print(result3)
+
+# 2. map() vs 컴프리헨션
+
+# map 사용 (lambda 가 필요해서 오히려 복잡해짐)
+list(map(lambda n: int(n) * 2, input().split()))
+
+# 컴프리헨션 사용
+[int(n) * 2 for n in input().split()]
+
+
+# ** 그냥 함수 하나를 그대로 적용만 할 때 (int, str 등) = map()이 더 간결
+# ** 연산이나 조건을 직접 써야할 때 (x * 2, if 조건 등) = 리스트 컴프레헨션이 더 명확
